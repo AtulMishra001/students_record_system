@@ -4,10 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="output.css">
 </head>
-<body>
-    
+<body class="flex w-full flex-col gap-[10px] items-start font-roboto bg-primary text-white">
+    <h1 class=" font-bold text-3xl p-4 bg-white text-black w-full" >Student Record System</h1>
+    <article class="text-center mb-9 sm:border p-4 mx-auto rounded-[15px] ">
+        You can register new student, update the existing ones and delete them also there is a display section below to see the students records.
+    </article>
+
+    <form class="flex flex-col md:flex-row md:max-w-[500px] flex-wrap m-auto justify-around gap-3 border p-3 rounded-[20px]" id="form">
+
+        <input required class="student-id input-placeholder focus:outline-0 focus:border-b-2" type="number" placeholder="STUDENT ID" name="id" autocomplete="true">
+        <input required class="student-name input-placeholder focus:outline-0 focus:border-b-2" type="text" placeholder="STUDENT NAME" name="name" autocomplete="true">
+        <input required class="student-course input-placeholder focus:outline-0 focus:border-b-2" type="text" placeholder="CLASS / COURSE" name="course" autocomplete="true">
+        <input required class="student-email input-placeholder focus:outline-0 focus:border-b-2" type="email" placeholder="STUDENT EMAIL" name="email" autocomplete="true">
+        <input required class="student-number input-placeholder focus:outline-0 focus:border-b-2" type="number" placeholder="MOBILE NUMBER" name="number" autocomplete="true">
+        <input required class="student-address input-placeholder focus:outline-0 focus:border-b-2" type="text" placeholder="ADDRESS" name="address" autocomplete="true">
+
+        <button class="submit-btn p-1 px-3 border-5 font-semibold text-xl max-w-[200px] border-secondary self-end ml-auto mr-9" type="submit">Submit</button>
+    </form>
+    <div class="error ">
+        <p></p>
+    </div>
+        <h1 class="text-xl mx-6 ">Existing records</h1>
+        <div class="display  px-[30px] flex flex-wrap gap-[30px]"></div>
+    </div>
     <script src="app.js"></script>
 </body>
 </html>
