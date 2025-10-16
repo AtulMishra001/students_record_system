@@ -16,7 +16,7 @@
     <form class="flex flex-col md:flex-row md:max-w-[500px] flex-wrap m-auto justify-around gap-3 border p-3 rounded-[20px]" id="form">
 
         <input required class="student-id input-placeholder focus:outline-0 focus:border-b-2" type="number" placeholder="STUDENT ID" name="id" autocomplete="true">
-        <input required class="student-name input-placeholder focus:outline-0 focus:border-b-2" type="text" placeholder="FULL NAME" name="name" autocomplete="true">
+        <input required class="student-name input-placeholder focus:outline-0 focus:border-b-2" type="text" placeholder="FULL NAME" name="name" autocomplete="true" pattern="^[a-zA-Z\s]+$" title="Only letters and spaces are allowed.">
         <input required class="student-course input-placeholder focus:outline-0 focus:border-b-2" type="text" placeholder="CLASS / COURSE" name="course" autocomplete="true">
         <input required class="student-email input-placeholder focus:outline-0 focus:border-b-2" type="email" placeholder="EMAIL ADDRESS" name="email" autocomplete="true">
         <input required class="student-number input-placeholder focus:outline-0 focus:border-b-2" type="number" placeholder="MOBILE NUMBER" name="number" autocomplete="true">

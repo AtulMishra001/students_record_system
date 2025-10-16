@@ -65,10 +65,17 @@ student_form.addEventListener("submit", (e) => {
       const input = document.querySelector(`[name=${key}]`);
       input.classList.add("error-border");
       input.value = "";
-      input.placeholder = `Enter ${key}`;
-    } else {
+      input.placeholder = `Enter valid value`;
+      displayMessage("empty spaces are not allowed", "warning")
+      return;
+    }
+    else {
       document.querySelector(`[name=${key}]`).classList.remove("error-border");
     }
+  }
+  if(studentData.number.length < 10) {
+    displayMessage("number should conatin at least 10 digits", "warning");
+    return;
   }
 
   try {
@@ -201,7 +208,6 @@ function updateMode(id, email) {
 
 //DISPLAYMESSAGE function
 function displayMessage(message, mode) {
-  const initialMassage = display_messsage.innerText;
   if (mode == "warning") {
     display_messsage.style.backgroundColor = "#4C2F36";
     display_messsage.style.Color = "#E19CB8";
@@ -218,6 +224,7 @@ function displayMessage(message, mode) {
     display_messsage.style.backgroundColor = "transparent";
     display_messsage.style.color = "white";
     display_messsage.style.font = "default";
-    display_messsage.innerText = initialMassage;
-  }, 7000);
+    display_messsage.innerText =
+      " You can register new student, update the existing ones and delete them also there is a display section below to see the students records.";
+  }, 5000);
 }
